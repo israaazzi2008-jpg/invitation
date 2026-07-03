@@ -69,7 +69,7 @@ export default function EntranceDoor({ onOpen }: EntranceDoorProps) {
           transition={{ duration: 1.8, ease: [0.77, 0, 0.175, 1] }}
           className="w-1/2 h-full bg-bordeaux-dark border-r border-beige-base/50 relative flex flex-col justify-between p-4 xs:p-6 md:p-8 shadow-[25px_0_50px_rgba(0,0,0,0.95)] origin-left z-30 overflow-hidden"
           style={{
-            backgroundImage: `linear-gradient(to right, rgba(35, 1, 7, 0.98), rgba(53, 6, 12, 0.92)), url("/src/assets/images/wedding_hall_door_1783085161030.jpg")`,
+            backgroundImage: `linear-gradient(to right, rgba(35, 1, 7, 0.98), rgba(53, 6, 12, 0.92)), url("/wedding_hall_door_1783085161030.jpg")`,
             backgroundSize: "cover",
             backgroundPosition: "left center",
           }}
@@ -121,7 +121,7 @@ export default function EntranceDoor({ onOpen }: EntranceDoorProps) {
           transition={{ duration: 1.8, ease: [0.77, 0, 0.175, 1] }}
           className="w-1/2 h-full bg-bordeaux-dark border-l border-beige-base/50 relative flex flex-col justify-between p-4 xs:p-6 md:p-8 shadow-[-25px_0_50px_rgba(0,0,0,0.95)] origin-right z-30 overflow-hidden"
           style={{
-            backgroundImage: `linear-gradient(to left, rgba(35, 1, 7, 0.98), rgba(53, 6, 12, 0.92)), url("/src/assets/images/wedding_hall_door_1783085161030.jpg")`,
+            backgroundImage: `linear-gradient(to left, rgba(35, 1, 7, 0.98), rgba(53, 6, 12, 0.92)), url("/wedding_hall_door_1783085161030.jpg")`,
             backgroundSize: "cover",
             backgroundPosition: "right center",
           }}
