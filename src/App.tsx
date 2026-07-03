@@ -48,7 +48,7 @@ export default function App() {
       <div 
         className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat pointer-events-none opacity-[0.84] filter brightness-[0.92] contrast-[1.03] saturate-[1.12]"
         style={{
-          backgroundImage: `url("/src/assets/images/gold_chandelier_flowers_1783085173996.jpg")`,
+          backgroundImage: `url("/gold_chandelier_flowers_1783085173996.jpg")`,
         }}
       />
       {/* Rich soft dark burgundy vignette to gracefully melt the image edges with the card backdrop for elite readability */}
@@ -315,9 +315,24 @@ export default function App() {
 
               <div className="h-[1px] w-24 bg-gradient-to-r from-transparent via-beige-base to-transparent mx-auto mb-4" />
               
-              <p className="font-sans-body text-[10px] text-beige-light/60 uppercase tracking-[0.2em] max-w-xs mx-auto leading-relaxed">
+              <p className="font-sans-body text-[10px] text-beige-light/60 uppercase tracking-[0.2em] max-w-xs mx-auto leading-relaxed mb-6">
                 <AnimatedText text="Votre présence bienveillante est le plus beau cadeau de notre union." variant="word" />
               </p>
+
+              {/* Added majestic end signature/monogram */}
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1.0, delay: 0.3, ease: "easeOut" }}
+                className="flex flex-col items-center mt-6"
+              >
+                <div className="relative w-12 h-12 flex items-center justify-center rounded-full border border-beige-base/40 bg-bordeaux-dark/60 shadow-[0_0_12px_rgba(235,220,201,0.2)] mb-3">
+                  <span className="font-serif-luxury text-sm font-semibold text-beige-bright tracking-wider">N ✦ M</span>
+                </div>
+                <p className="font-pinyon text-2xl text-beige-bright mb-1">Nina & Merwane</p>
+                <p className="font-serif-luxury text-[8px] text-beige-dark/70 tracking-[0.3em] uppercase">Avec Amour & Bénédiction</p>
+              </motion.div>
             </div>
           </motion.div>
         )}
