@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cinzel+Decorative:wght@400;700;900&family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pinyon+Script&family=Reem+Kufi:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-bordeaux-light: #8b2632;
+  --color-bordeaux-base: #5c0612;
+  --color-bordeaux-dark: #350107;
+  
+  --color-beige-light: #e4dac9;
+  --color-beige-base: #dfcfb7;
+  --color-beige-dark: #bca88e;
+  --color-beige-bright: #ebdcc9;
+  
+  /* Aliased for transition safety */
+  --color-gold-light: #e4dac9;
+  --color-gold-base: #dfcfb7;
+  --color-gold-dark: #bca88e;
+  --color-gold-bright: #ebdcc9;
+
+  --font-serif-luxury: "Cinzel Decorative", serif;
+  --font-script-luxury: "Great Vibes", cursive;
+  --font-pinyon: "Pinyon Script", cursive;
+  --font-arabic-quran: "Amiri", serif;
+  --font-sans-body: "Montserrat", sans-serif;
+
+  --animate-sparkle: sparkle-twinkle 4s ease-in-out infinite;
+  --animate-gold-shimmer: shimmer 8s ease-in-out infinite;
+  --animate-spin-slow: spin 20s linear infinite;
+  --animate-float-slow: float 6s ease-in-out infinite;
+}
+
+@keyframes sparkle-twinkle {
+  0%, 100% { opacity: 0; transform: translateY(0) scale(0.5); }
+  50% { opacity: 1; transform: translateY(-20px) scale(1.2); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+}
+
+/* Custom styles for luxurious elements */
+.gold-text-gradient {
+  background: linear-gradient(
+    to right,
+    #ebdcc9 0%,
+    #fbf9f4 25%,
+    #d5be9f 50%,
+    #f4eae1 75%,
+    #c0ad92 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 12s linear infinite;
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(
+    to right,
+    #ebdcc9 0%,
+    #fbf9f4 25%,
+    #d5be9f 50%,
+    #f4eae1 75%,
+    #c0ad92 100%
+  ) 1;
+}
+
+.gold-shadow {
+  box-shadow: 0 0 25px rgba(223, 211, 195, 0.2);
+}
+
+.bordeaux-radial-gradient {
+  background: radial-gradient(circle at center, #5c0612 0%, #350107 100%);
+}
+
+.glassmorphism {
+  background: rgba(53, 1, 7, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1.5px solid rgba(235, 220, 201, 0.25);
+}
+
+.oval-cadre {
+  border-radius: 50% / 40%;
+}
+
+/* Hide scrollbars for cinematic feel */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
