@@ -9,8 +9,8 @@ import AnimatedText from "./components/AnimatedText";
 
 export default function App() {
   const [doorOpened, setDoorOpened] = useState(false);
-  const [sparkles, setSparkles] = useState<{ id: number; top: string; left: string; size: number; delay: number }[]>([]);
-  const [petals, setPetals] = useState<{ id: number; left: string; size: number; delay: number; duration: number; sway: number; spin: number }[]>([]);
+  const [sparkles, setSparkles] = useState<{ id: number; top: string; left: string; size: number; delay: number; duration: number }[]>([]);
+  const [petals, setPetals] = useState<{ id: number; left: string; size: number; delay: number; duration: number; sway: number; spin: number; spinEnd: number }[]>([]);
 
   const handleOpenDoor = () => {
     setDoorOpened(true);
@@ -18,24 +18,26 @@ export default function App() {
 
   // Generate random sparkles and falling rose petals across the main invitation background
   useEffect(() => {
-    const list = Array.from({ length: 55 }).map((_, i) => ({
+    // Reduced sparkle and petal counts to massively improve performance on mobile/tablets
+    const list = Array.from({ length: 18 }).map((_, i) => ({
       id: i,
       top: `${Math.random() * 100}%`,
       left: `${Math.random() * 100}%`,
       size: Math.random() * 3.5 + 1,
-      delay: Math.random() * 5,
+      delay: Math.random() * 4,
+      duration: 5 + Math.random() * 5,
     }));
     setSparkles(list);
 
-    // Generate falling rose petals and love hearts with various delay, speed, and size
-    const petalList = Array.from({ length: 45 }).map((_, i) => ({
+    const petalList = Array.from({ length: 14 }).map((_, i) => ({
       id: i,
       left: `${Math.random() * 100}%`,
-      size: Math.random() * 20 + 12, // size between 12px and 32px
-      delay: Math.random() * 18,
-      duration: 10 + Math.random() * 14, // 10s to 24s fall duration
-      sway: Math.random() * 120 - 60, // horizontal drift range
+      size: Math.random() * 16 + 10, // size between 10px and 26px
+      delay: Math.random() * 12,
+      duration: 14 + Math.random() * 12, // 14s to 26s fall duration
+      sway: Math.random() * 80 - 40, // horizontal drift range
       spin: Math.random() * 360, // initial rotation
+      spinEnd: Math.random() * 360 + 180, // pre-calculate end rotation
     }));
     setPetals(petalList);
   }, []);
@@ -111,7 +113,7 @@ export default function App() {
               y: [0, 80], // Gentle slow downward drift
             }}
             transition={{
-              duration: 4 + Math.random() * 5,
+              duration: sparkle.duration,
               repeat: Infinity,
               ease: "easeInOut",
               delay: sparkle.delay,
@@ -183,7 +185,7 @@ export default function App() {
             animate={{
               top: "108%",
               opacity: [0, 0.85, 0.85, 0],
-              rotate: [petal.spin, petal.spin + 360 + Math.random() * 180],
+              rotate: [petal.spin, petal.spin + petal.spinEnd],
               x: [0, petal.sway, petal.sway * -0.5, petal.sway * 0.8],
             }}
             transition={{
@@ -248,9 +250,24 @@ export default function App() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
-            className="text-center mt-12 mb-4 px-4"
+            className="text-center mt-10 mb-4 px-4 w-full max-w-xl flex flex-col items-center"
           >
-            <span className="font-serif-luxury text-[10px] md:text-xs text-beige-base tracking-[0.3em] uppercase block mb-3">
+            {/* Words of Honor at the very top */}
+            <p className="font-pinyon text-4xl md:text-5xl text-beige-bright filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] mb-2 select-none">
+              En l'honneur de Nina & Merwane
+            </p>
+            <p className="font-serif-luxury text-[10px] md:text-[11px] text-beige-base uppercase tracking-[0.22em] md:tracking-[0.25em] leading-relaxed max-w-xs md:max-w-md filter drop-shadow opacity-95 text-center mb-5">
+              Deux cœurs unis sous la bienveillance céleste, célébrés dans la joie et la sincérité
+            </p>
+
+            {/* Majestic Line with Center Accent */}
+            <div className="flex items-center justify-center w-full max-w-xs mb-8 gap-3">
+              <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-beige-base/50 to-beige-base" />
+              <div className="text-beige-bright text-[10px] animate-pulse">✦</div>
+              <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent via-beige-base/50 to-beige-base" />
+            </div>
+
+            <span className="font-serif-luxury text-[10px] md:text-xs text-beige-dark tracking-[0.3em] uppercase block mb-3 opacity-80">
               Fiançailles de Nina & Merwane
             </span>
             <p className="font-arabic-quran text-2xl text-beige-bright max-w-md mx-auto leading-relaxed">
