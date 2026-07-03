@@ -45,28 +45,22 @@ export default function LocationCard() {
           </div>
         </div>
 
-        {/* Mock Graphic Map Frame */}
-        <div className="relative z-10 w-full h-40 rounded-lg border border-beige-base/20 bg-bordeaux-dark/95 overflow-hidden mb-6 flex items-center justify-center shadow-inner group">
-          {/* Decorative geometric vector map pattern using beige color */}
-          <div className="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(#ebdcc9_1px,transparent_1px)] [background-size:16px_16px]" />
-          
-          {/* Animated concentric radar waves */}
-          <div className="absolute w-24 h-24 rounded-full border border-beige-base/30 animate-ping opacity-15" />
-          <div className="absolute w-12 h-12 rounded-full border-2 border-beige-base/40 animate-pulse bg-beige-base/10" />
-
-          {/* Central Map pin on elegant graphics */}
-          <div className="relative z-15 flex flex-col items-center">
-            <Map className="w-8 h-8 text-beige-bright mb-1 filter drop-shadow" />
-            <span className="font-serif-luxury text-[9px] tracking-[0.2em] text-beige-base uppercase">
-              Salle de Réception Marwa
-            </span>
-          </div>
+        {/* Real Google Map Frame */}
+        <div className="relative z-10 w-full h-56 rounded-xl border border-beige-base/30 bg-bordeaux-dark/40 overflow-hidden mb-6 shadow-inner group">
+          <iframe
+            src="https://maps.google.com/maps?q=Salle%20des%20f%C3%AAtes%20Marwa%2C%20Les%20Eucalyptus&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            className="w-full h-full border-0 filter grayscale-[20%] invert-[90%] hue-rotate-[180deg] brightness-[0.85] contrast-[1.1] sepia-[10%] opacity-90 hover:opacity-100 transition-opacity duration-300"
+            allowFullScreen={false}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Salle des Fêtes Marwa Map"
+          />
           
           {/* Border details */}
-          <div className="absolute top-2 left-2 w-3 h-3 border-t border-l border-beige-base/40" />
-          <div className="absolute top-2 right-2 w-3 h-3 border-t border-r border-beige-base/40" />
-          <div className="absolute bottom-2 left-2 w-3 h-3 border-b border-l border-beige-base/40" />
-          <div className="absolute bottom-2 right-2 w-3 h-3 border-b border-r border-beige-base/40" />
+          <div className="absolute top-2 left-2 w-3 h-3 border-t border-l border-beige-base/50 pointer-events-none" />
+          <div className="absolute top-2 right-2 w-3 h-3 border-t border-r border-beige-base/50 pointer-events-none" />
+          <div className="absolute bottom-2 left-2 w-3 h-3 border-b border-l border-beige-base/50 pointer-events-none" />
+          <div className="absolute bottom-2 right-2 w-3 h-3 border-b border-r border-beige-base/50 pointer-events-none" />
         </div>
 
         {/* Navigation Button */}
