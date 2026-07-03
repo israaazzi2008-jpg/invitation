@@ -253,25 +253,25 @@ export default function App() {
             className="text-center mt-10 mb-4 px-4 w-full max-w-xl flex flex-col items-center"
           >
             {/* Words of Honor at the very top */}
-            <p className="font-pinyon text-4xl md:text-5xl text-beige-bright filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] mb-2 select-none">
+            <p className="font-pinyon text-5xl md:text-6xl text-beige-bright filter drop-shadow-[0_2px_5px_rgba(0,0,0,0.6)] mb-3 select-none">
               En l'honneur de Nina & Merwane
             </p>
-            <p className="font-serif-luxury text-[10px] md:text-[11px] text-beige-base uppercase tracking-[0.22em] md:tracking-[0.25em] leading-relaxed max-w-xs md:max-w-md filter drop-shadow opacity-95 text-center mb-5">
+            <p className="font-serif-luxury text-xs md:text-sm font-semibold text-beige-base uppercase tracking-[0.2em] md:tracking-[0.24em] leading-relaxed max-w-xs md:max-w-md filter drop-shadow opacity-95 text-center mb-6">
               Deux cœurs unis sous la bienveillance céleste, célébrés dans la joie et la sincérité
             </p>
 
             {/* Majestic Line with Center Accent */}
             <div className="flex items-center justify-center w-full max-w-xs mb-8 gap-3">
-              <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-beige-base/50 to-beige-base" />
+              <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-beige-base/60 to-beige-base" />
               <div className="text-beige-bright text-[10px] animate-pulse">✦</div>
-              <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent via-beige-base/50 to-beige-base" />
+              <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent via-beige-base/60 to-beige-base" />
             </div>
 
-            <span className="font-serif-luxury text-[10px] md:text-xs text-beige-dark tracking-[0.3em] uppercase block mb-3 opacity-80">
+            <span className="font-serif-luxury text-xs md:text-sm text-beige-bright tracking-[0.35em] uppercase block mb-4 filter drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)] font-black select-none">
               Fiançailles de Nina & Merwane
             </span>
-            <p className="font-arabic-quran text-2xl text-beige-bright max-w-md mx-auto leading-relaxed">
-              بسم الله الرحمن الرحيم
+            <p className="font-arabic-quran text-3xl md:text-4xl text-beige-bright filter drop-shadow-[0_2px_8px_rgba(235,220,201,0.5)] max-w-md mx-auto leading-relaxed tracking-wide select-none">
+              بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
             </p>
           </motion.div>
         )}
@@ -317,6 +317,15 @@ export default function App() {
               
               <p className="font-sans-body text-[10px] text-beige-light/60 uppercase tracking-[0.2em] max-w-xs mx-auto leading-relaxed mb-6">
                 <AnimatedText text="Votre présence bienveillante est le plus beau cadeau de notre union." variant="word" />
+              </p>
+
+              {/* Additional words of honor and blessings at the very end */}
+              <p className="font-arabic-quran text-2xl md:text-3xl text-beige-bright/90 filter drop-shadow-[0_1px_4px_rgba(235,220,201,0.4)] leading-relaxed max-w-md mx-auto mb-4 select-none">
+                دَامَتِ الدِّيَارُ بِالْمَسَرَّاتِ عَامِرَةً
+              </p>
+              
+              <p className="font-pinyon text-3xl text-beige-bright filter drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)] mb-6 select-none">
+                Dans l'attente du bonheur de vous compter parmi nous
               </p>
 
               {/* Added majestic end signature/monogram */}
