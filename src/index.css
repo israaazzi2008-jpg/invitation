@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cinzel+Decorative:wght@400;700;900&family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pinyon+Script&family=Reem+Kufi:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pinyon+Script&family=Reem+Kufi:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -17,7 +17,9 @@
   --color-gold-dark: #bca88e;
   --color-gold-bright: #ebdcc9;
 
-  --font-serif-luxury: "Cinzel Decorative", serif;
+  --font-serif-luxury: "Cinzel", serif;
+  --font-serif-decorative: "Cinzel Decorative", serif;
+  --font-serif-royal: "Cormorant Garamond", serif;
   --font-script-luxury: "Great Vibes", cursive;
   --font-pinyon: "Pinyon Script", cursive;
   --font-arabic-quran: "Amiri", serif;
@@ -98,3 +100,4 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
