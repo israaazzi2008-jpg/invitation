@@ -83,32 +83,26 @@ export default function ProgrammeTimeline() {
   const timelineItems = [
     {
       time: "14:00",
-      title: "Début & Accueil",
-      description: "Accueil chaleureux avec une sélection raffinée de douceurs sucrées, pièces salées gourmandes, boissons rafraîchissantes et thés traditionnels parfumés.",
-      icon: Clock,
-    },
-    {
-      time: "15:00",
-      title: "Entrée Solennelle",
-      description: "Entrée majestueuse de nos magnifiques fiancés, Nina et Merwane, sous les applaudissements et accompagnée d'un accueil musical traditionnel d'honneur.",
+      title: "Rentrée de Nina & Accueil",
+      description: "Accueil des invités et entrée solennelle de la mariée Nina (seule), accompagnée d'une ambiance musicale festive.",
       icon: Music,
     },
     {
-      time: "17:00",
+      time: "16:30",
       title: "Dîner de Fête",
-      description: "Partage d'un somptueux dîner gastronomique de fête préparé avec soin en l'honneur de cette promesse d'union éternelle.",
+      description: "Partage d'un somptueux repas gastronomique de fête d'exception, préparé avec le plus grand soin en l'honneur de nos convives.",
       icon: Utensils,
     },
     {
-      time: "19:00",
-      title: "Soirée Festive",
-      description: "Une ambiance extraordinaire, chaleureuse et dansante pour célébrer le bonheur de notre couple complice en musique.",
+      time: "18:30",
+      title: "Cérémonie du Henné & Alliances",
+      description: "Célébration de la cérémonie rituelle traditionnelle du Henné marquant l'arrivée chaleureuse des hommes, suivie du moment d'émotion unique de l'échange solennel des alliances.",
       icon: Sparkles,
     },
     {
-      time: "21:00",
-      title: "Gâteaux & Douceurs",
-      description: "Découpe officielle de la pièce montée de fiançailles accompagnée de douceurs d'exception et de cafés pour clore cette merveilleuse journée.",
+      time: "20:00 - 21:00",
+      title: "La Soirée Festive, Gâteau & Thé",
+      description: "Une ambiance festive inoubliable rythmée par les danses et la musique, accompagnée de la dégustation de thé traditionnel, de douceurs et de la découpe officielle de la pièce montée. Clôture de la fête à 21h00.",
       icon: Cake,
     },
   ];
