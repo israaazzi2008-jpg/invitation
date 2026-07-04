@@ -5,21 +5,49 @@ interface EntranceDoorProps {
   onOpen: () => void;
 }
 
-// Gorgeous, detailed custom vector filigree for the corners to elevate the luxury feel
-const CornerFiligree = ({ className }: { className?: string }) => (
-  <svg className={`absolute w-24 h-24 md:w-32 md:h-32 pointer-events-none z-30 ${className}`} viewBox="0 0 100 100" fill="none">
-    {/* Intricate golden baroque scrollwork */}
-    <path d="M 4 4 L 92 4 C 80 12, 70 28, 70 44 C 70 60, 55 66, 44 66 C 28 66, 12 80, 4 92 Z" stroke="url(#gold-grad-door)" strokeWidth="1.2" fill="none" opacity="0.85" />
-    <path d="M 10 10 L 75 10 C 65 18, 55 32, 55 46 C 55 56, 46 60, 36 60 C 22 60, 18 72, 10 75 Z" stroke="url(#gold-grad-door)" strokeWidth="0.8" fill="none" opacity="0.6" />
-    
-    {/* Decorative dots and accents */}
-    <circle cx="12" cy="12" r="2.5" fill="url(#gold-grad-door)" opacity="0.9" />
-    <circle cx="34" cy="12" r="1.5" fill="url(#gold-grad-door)" opacity="0.75" />
-    <circle cx="12" cy="34" r="1.5" fill="url(#gold-grad-door)" opacity="0.75" />
-    
-    {/* Double border lines */}
-    <path d="M 4 4 L 4 94" stroke="url(#gold-grad-door)" strokeWidth="1.2" opacity="0.8" />
-    <path d="M 4 4 L 94 4" stroke="url(#gold-grad-door)" strokeWidth="1.2" opacity="0.8" />
+// Elegant, luxurious golden leaf (feuille d'or) cascading downwards from the top-right corner
+const GoldenLeafCorner = ({ className }: { className?: string }) => (
+  <svg className={`absolute w-16 h-28 sm:w-20 sm:h-36 md:w-24 md:h-44 pointer-events-none z-40 ${className}`} viewBox="0 0 100 160" fill="none">
+    {/* Delicate fine outer borders near the corner */}
+    <path d="M 100 4 L 60 4" stroke="url(#gold-grad-door)" strokeWidth="1.0" opacity="0.8" />
+    <path d="M 96 0 L 96 40" stroke="url(#gold-grad-door)" strokeWidth="1.0" opacity="0.8" />
+    <path d="M 100 9 L 75 9" stroke="url(#gold-grad-door)" strokeWidth="0.6" opacity="0.4" />
+    <path d="M 91 0 L 91 50" stroke="url(#gold-grad-door)" strokeWidth="0.6" opacity="0.4" />
+
+    {/* Sinuous, elegant main stem curving down-left */}
+    <path d="M 96 0 Q 80 60, 40 130" stroke="url(#gold-grad-door)" strokeWidth="2.0" strokeLinecap="round" opacity="0.9" />
+    <path d="M 96 0 Q 80 60, 40 130" stroke="#fff" strokeWidth="0.5" strokeLinecap="round" opacity="0.3" />
+
+    {/* Exquisite small golden leaves cascading down */}
+    {/* Leaf 1 (upper) */}
+    <path d="M 90 12 C 78 18, 65 30, 60 42 C 70 38, 85 28, 90 12 Z" fill="url(#gold-grad-door)" opacity="0.95" />
+    <path d="M 90 12 Q 75 25, 60 42" stroke="#fff" strokeWidth="0.4" opacity="0.4" />
+
+    {/* Leaf 2 (mid) */}
+    <path d="M 80 45 C 65 52, 52 70, 48 85 C 58 78, 74 65, 80 45 Z" fill="url(#gold-grad-door)" opacity="0.9" />
+    <path d="M 80 45 Q 64 61, 48 85" stroke="#fff" strokeWidth="0.4" opacity="0.4" />
+
+    {/* Leaf 3 (lower) */}
+    <path d="M 66 82 C 50 90, 42 110, 38 122 C 46 115, 60 102, 66 82 Z" fill="url(#gold-grad-door)" opacity="0.85" />
+    <path d="M 66 82 Q 52 98, 38 122" stroke="#fff" strokeWidth="0.4" opacity="0.4" />
+
+    {/* Secondary small decorative leaves branching out right/down */}
+    <path d="M 97 8 C 99 22, 94 36, 88 42 C 92 28, 96 16, 97 8 Z" fill="url(#gold-grad-door)" opacity="0.8" />
+    <path d="M 86 48 C 88 64, 82 78, 74 84 C 79 70, 84 56, 86 48 Z" fill="url(#gold-grad-door)" opacity="0.8" />
+    <path d="M 72 88 C 74 102, 68 114, 61 120 C 65 108, 70 96, 72 88 Z" fill="url(#gold-grad-door)" opacity="0.75" />
+
+    {/* Fine accent organic tendril scroll */}
+    <path d="M 96 4 Q 72 32, 80 52" stroke="url(#gold-grad-door)" strokeWidth="0.6" fill="none" opacity="0.5" />
+
+    {/* Delicate tiny pearls dropping from leaf tips */}
+    <line x1="48" y1="85" x2="48" y2="97" stroke="url(#gold-grad-door)" strokeWidth="0.5" opacity="0.4" />
+    <circle cx="48" cy="99" r="1.2" fill="url(#gold-grad-door)" opacity="0.8" />
+
+    <line x1="38" y1="122" x2="38" y2="136" stroke="url(#gold-grad-door)" strokeWidth="0.5" opacity="0.4" />
+    <circle cx="38" cy="138" r="1.5" fill="url(#gold-grad-door)" opacity="0.9" />
+
+    <line x1="40" y1="130" x2="40" y2="148" stroke="url(#gold-grad-door)" strokeWidth="0.5" opacity="0.4" />
+    <circle cx="40" cy="150" r="1.8" fill="url(#gold-grad-door)" opacity="0.95" />
   </svg>
 );
 
@@ -86,7 +114,7 @@ export default function EntranceDoor({ onOpen }: EntranceDoorProps) {
           </div>
 
           {/* Golden Gradient Definition for vectors */}
-          <svg className="hidden">
+          <svg className="absolute w-0 h-0 opacity-0 pointer-events-none" aria-hidden="true">
             <defs>
               <linearGradient id="gold-grad-door" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stopColor="#bca88e" />
@@ -102,11 +130,8 @@ export default function EntranceDoor({ onOpen }: EntranceDoorProps) {
           <div className="absolute inset-4 md:inset-6 border border-beige-base/15 pointer-events-none z-30">
             <div className="absolute inset-1 border border-beige-base/5" />
             
-            {/* Corner Filigree Frames */}
-            <CornerFiligree className="top-0 left-0" />
-            <CornerFiligree className="top-0 right-0 rotate-90" />
-            <CornerFiligree className="bottom-0 left-0 -rotate-90" />
-            <CornerFiligree className="bottom-0 right-0 rotate-180" />
+            {/* Single luxurious golden leaf cascading downwards from the top-right corner */}
+            <GoldenLeafCorner className="top-0 right-0" />
           </div>
 
           {/* Floating magical gold dust drifting behind text */}
@@ -207,3 +232,4 @@ export default function EntranceDoor({ onOpen }: EntranceDoorProps) {
     </AnimatePresence>
   );
 }
+
