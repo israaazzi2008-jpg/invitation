@@ -56,13 +56,11 @@ export default function EntranceDoor({ onOpen }: EntranceDoorProps) {
 
   // Dynamic fallback image paths to prioritize user's custom image files, fallback to generated assets
   const fegPaths = [
-    "/swan.jpg",
-    "/natural_swans_love.jpg",
     "/feg.png",
     "/feg.jpg",
     "/feg.jpeg",
     "/feg.webp",
-    "/gold_chandelier_flowers_1783085173996.jpg"
+
   ];
   const [imgIndex, setImgIndex] = useState(0);
 
