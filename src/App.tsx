@@ -12,10 +12,6 @@ export default function App() {
   const [sparkles, setSparkles] = useState<{ id: number; top: string; left: string; size: number; delay: number; duration: number }[]>([]);
   const [petals, setPetals] = useState<{ id: number; left: string; size: number; delay: number; duration: number; sway: number; spin: number; spinEnd: number }[]>([]);
 
-  const handleOpenDoor = () => {
-    setDoorOpened(true);
-  };
-
   // Generate random sparkles and falling rose petals across the main invitation background
   useEffect(() => {
     // Reduced sparkle and petal counts to massively improve performance on mobile/tablets
@@ -233,11 +229,11 @@ export default function App() {
       {/* ENTRANCE DOOR OVERLAY */}
       <AnimatePresence>
         {!doorOpened && (
-          <EntranceDoor onOpen={handleOpenDoor} />
+          <EntranceDoor onOpen={() => setDoorOpened(true)} />
         )}
       </AnimatePresence>
 
-      {/* MAIN INVITATION CONTENT (Revealed when door is opened) */}
+      {/* MAIN INVITATION CONTENT */}
       <main className={`relative z-20 w-full min-h-screen flex flex-col items-center justify-start pb-24 ${!doorOpened ? "h-screen overflow-hidden" : ""}`}>
         {/* Decorative Top Accent */}
         <div className="w-full h-8 bg-gradient-to-b from-beige-base/20 to-transparent relative flex justify-center pointer-events-none">
@@ -343,6 +339,24 @@ export default function App() {
                 <p className="font-serif-luxury text-[8px] text-beige-dark/70 tracking-[0.3em] uppercase">Avec Amour & Bénédiction</p>
               </motion.div>
             </div>
+
+            {/* Elegant line with interlocking gold rings outside the card cadre */}
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.0, delay: 0.5 }}
+              className="flex items-center justify-center w-full max-w-xs mx-auto mt-8 gap-3"
+            >
+              <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-beige-base/60 to-beige-base" />
+              <div className="relative w-12 h-6 flex items-center justify-center">
+                {/* Ring 1 - Left */}
+                <div className="absolute left-1 w-5.5 h-5.5 rounded-full border-2 border-beige-bright shadow-[0_0_8px_rgba(244,234,225,0.8)] bg-transparent z-10" />
+                {/* Ring 2 - Right */}
+                <div className="absolute right-1 w-5.5 h-5.5 rounded-full border-2 border-beige-dark shadow-[0_0_6px_rgba(188,168,142,0.6)] bg-transparent" />
+              </div>
+              <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent via-beige-base/60 to-beige-base" />
+            </motion.div>
           </motion.div>
         )}
 
