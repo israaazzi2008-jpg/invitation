@@ -98,7 +98,7 @@ export default function InvitationLetter() {
         {/* Real picture of swans in the background, styled as a premium backdrop for the entire cadre */}
         <div className="absolute inset-0 z-0 overflow-hidden rounded-[20px] sm:rounded-[50%/35%]">
           <img 
-            src="/swan.webp" 
+            src="/swan.jpg" 
             alt="Deux cygnes amoureux" 
             className="w-full h-full object-cover transition-transform duration-[15000ms] hover:scale-105"
             referrerPolicy="no-referrer"
