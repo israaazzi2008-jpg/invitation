@@ -89,14 +89,15 @@ export default function InvitationLetter() {
 
       {/* MAIN OVAL LETTER CONTAINER (CADRE OVAL) */}
       <motion.div
+        id="invitation_letter_container"
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-        className="relative bg-bordeaux-dark border-2 border-beige-base/40 p-6 xs:p-8 sm:p-12 md:p-16 gold-shadow glassmorphism w-full min-h-[580px] flex items-center justify-center rounded-[50%/35%] overflow-hidden"
+        className="relative bg-bordeaux-dark border-2 border-beige-base/40 p-5 xs:p-8 sm:p-12 md:p-16 gold-shadow glassmorphism w-full min-h-[460px] xs:min-h-[500px] sm:min-h-[540px] md:min-h-[580px] flex items-center justify-center rounded-[50%/32%] xs:rounded-[50%/35%] sm:rounded-[50%/38%] overflow-hidden"
       >
         {/* Real picture of swans in the background, styled as a premium backdrop for the entire cadre */}
-        <div className="absolute inset-0 z-0 overflow-hidden rounded-[50%/35%]">
+        <div className="absolute inset-0 z-0 overflow-hidden rounded-[50%/32%] xs:rounded-[50%/35%] sm:rounded-[50%/38%]">
           <img 
             src="/swan.jpg" 
             alt="Deux cygnes amoureux" 
@@ -115,13 +116,13 @@ export default function InvitationLetter() {
         </div>
 
         {/* Inner thin beige border */}
-        <div className="absolute inset-3 sm:inset-4 border border-beige-base/20 rounded-[50%/35%] pointer-events-none z-10" />
+        <div className="absolute inset-3 sm:inset-4 border border-beige-base/20 rounded-[50%/32%] xs:rounded-[50%/35%] sm:rounded-[50%/38%] pointer-events-none z-10" />
 
         {/* Content */}
         <div className="relative z-20 flex flex-col items-center text-center w-full max-w-lg">
           
           {/* Quranic Verse Calligraphy */}
-          <div className="my-5 flex flex-col items-center w-full">
+          <div className="my-2.5 xs:my-3.5 sm:my-5 flex flex-col items-center w-full">
             <p className="font-arabic-quran text-4xl md:text-5xl text-beige-bright filter drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] leading-relaxed text-center animate-pulse tracking-wide select-none">
               وخلقناكم أزواجاً
             </p>
@@ -130,7 +131,7 @@ export default function InvitationLetter() {
             </p>
  
             {/* A line and rings between the line */}
-            <div className="flex items-center justify-center w-full max-w-xs my-6 gap-3">
+            <div className="flex items-center justify-center w-full max-w-xs my-3 xs:my-4 sm:my-6 gap-3">
               <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-beige-base/60 to-beige-base" />
               {/* Overlapping gold rings in the middle of the line */}
               <div className="relative w-12 h-6 flex items-center justify-center">
@@ -144,22 +145,22 @@ export default function InvitationLetter() {
           </div>
  
           {/* Couple Invitation Header in elegant French */}
-          <div className="my-4 px-3">
+          <div className="my-2 xs:my-3 sm:my-4 px-3">
             <p className="font-serif-luxury text-[11px] md:text-xs text-beige-bright tracking-[0.22em] leading-relaxed text-center uppercase filter drop-shadow-[0_1px_4px_rgba(0,0,0,0.95)]">
               Sous le regard bienveillant du Très-Haut, nous avons l'immense bonheur de vous annoncer notre promesse d'union éternelle et sacrée
             </p>
           </div>
  
           {/* Names of Couple */}
-          <div className="my-5">
-            <h1 className="font-script-luxury text-6xl md:text-7xl text-beige-bright filter drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)] leading-none text-center select-none font-semibold">
+          <div className="my-2 xs:my-3.5 sm:my-5">
+            <h1 className="font-script-luxury text-[42px] xs:text-5xl sm:text-6xl md:text-7xl text-beige-bright filter drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)] leading-none text-center select-none font-semibold">
               Nina & Merwane
             </h1>
             <div className="h-[1px] w-28 bg-gradient-to-r from-transparent via-beige-base to-transparent mx-auto mt-4" />
           </div>
  
           {/* Honorable French Welcoming Invitation Words */}
-          <div className="space-y-4 px-4 my-4 font-sans-body text-xs md:text-sm uppercase tracking-[0.16em] text-beige-bright font-medium leading-relaxed text-center filter drop-shadow-[0_2px_5px_rgba(0,0,0,0.95)]">
+          <div className="space-y-2 xs:space-y-3.5 sm:space-y-4 px-3 xs:px-4 my-2 xs:my-3 sm:my-4 font-sans-body text-[11px] xs:text-xs md:text-sm uppercase tracking-[0.16em] text-beige-bright font-medium leading-relaxed text-center filter drop-shadow-[0_2px_5px_rgba(0,0,0,0.95)]">
             <div>
               <AnimatedText 
                 text="C'est avec une joie infinie que nous serions honorés de vous compter parmi nos invités d'exception pour sceller cette promesse d'amour."
@@ -178,7 +179,7 @@ export default function InvitationLetter() {
           </div>
  
           {/* Elegant Divider */}
-          <div className="mt-8 text-beige-base/50 text-sm text-center">
+          <div className="mt-4 xs:mt-6 sm:mt-8 text-beige-base/50 text-sm text-center">
             ✦ ✨ ✦
           </div>
  
