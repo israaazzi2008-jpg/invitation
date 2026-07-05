@@ -93,10 +93,10 @@ export default function InvitationLetter() {
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-        className="relative bg-bordeaux-dark border-2 border-beige-base/40 p-6 xs:p-8 sm:p-12 md:p-16 gold-shadow glassmorphism w-full min-h-[580px] flex items-center justify-center rounded-3xl sm:rounded-[50%/35%] overflow-hidden"
+        className="relative bg-bordeaux-dark border-2 border-beige-base/40 p-6 xs:p-8 sm:p-12 md:p-16 gold-shadow glassmorphism w-full min-h-[580px] flex items-center justify-center rounded-[50%/35%] overflow-hidden"
       >
         {/* Real picture of swans in the background, styled as a premium backdrop for the entire cadre */}
-        <div className="absolute inset-0 z-0 overflow-hidden rounded-[20px] sm:rounded-[50%/35%]">
+        <div className="absolute inset-0 z-0 overflow-hidden rounded-[50%/35%]">
           <img 
             src="/swan.jpg" 
             alt="Deux cygnes amoureux" 
@@ -115,7 +115,7 @@ export default function InvitationLetter() {
         </div>
 
         {/* Inner thin beige border */}
-        <div className="absolute inset-3 sm:inset-4 border border-beige-base/20 rounded-[20px] sm:rounded-[50%/35%] pointer-events-none z-10" />
+        <div className="absolute inset-3 sm:inset-4 border border-beige-base/20 rounded-[50%/35%] pointer-events-none z-10" />
 
         {/* Content */}
         <div className="relative z-20 flex flex-col items-center text-center w-full max-w-lg">
