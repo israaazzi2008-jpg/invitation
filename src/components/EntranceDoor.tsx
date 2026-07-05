@@ -96,7 +96,7 @@ export default function EntranceDoor({ onOpen }: EntranceDoorProps) {
           <div className="absolute inset-0 bg-gradient-to-br from-[#0a1e13] via-[#240307] to-[#0a0001] z-0" />
 
           {/* DYNAMIC BLENDED HERO IMAGE (Left-aligned & perfectly blended / متداخل) */}
-          <div className="absolute inset-y-0 left-0 w-[48%] md:w-[60%] h-full z-10 pointer-events-none overflow-hidden">
+          <div className="absolute inset-y-0 left-0 w-[52%] xs:w-[48%] md:w-[60%] h-full z-10 pointer-events-none overflow-hidden">
             <img 
               src={currentFegSrc}
               onError={handleImgError}
@@ -153,10 +153,10 @@ export default function EntranceDoor({ onOpen }: EntranceDoorProps) {
           <div className="relative flex-1 w-full flex flex-row items-center justify-end px-3 xs:px-6 sm:px-12 md:px-20 lg:px-32 z-30">
             
             {/* Left side spacer to hold the gorgeous portrait illustration space */}
-            <div className="w-[48%] md:w-[45%] h-full pointer-events-none" />
+            <div className="w-[35%] xs:w-[40%] md:w-[45%] h-full pointer-events-none" />
 
             {/* Right Side: Luxurious Dark Negative Space with Gold Calligraphic Text */}
-            <div className="w-[52%] md:w-[55%] max-w-lg md:max-w-2xl text-right flex flex-col items-end justify-center pr-1 xs:pr-4 md:pr-0 bg-transparent">
+            <div className="w-[65%] xs:w-[60%] md:w-[55%] max-w-lg md:max-w-2xl text-right flex flex-col items-end justify-center pr-2 xs:pr-4 md:pr-0 bg-transparent">
               
               {/* Interlocking Rings Divider (placed elegant and high up as header) */}
               <motion.div 
@@ -165,7 +165,7 @@ export default function EntranceDoor({ onOpen }: EntranceDoorProps) {
                 transition={{ duration: 1.0, delay: 0.2 }}
                 className="flex items-center justify-end w-full max-w-xs gap-1.5 xs:gap-3 mb-2 sm:mb-8"
               >
-                <div className="h-[1px] w-8 xs:w-24 bg-gradient-to-r from-transparent to-beige-base/70" />
+                <div className="h-[1px] w-12 xs:w-24 bg-gradient-to-r from-transparent to-beige-base/70" />
                 <div className="relative w-8 h-4 xs:w-10 xs:h-5 flex items-center justify-center">
                   <div className="absolute left-0.5 w-3.5 h-3.5 xs:w-4.5 xs:h-4.5 rounded-full border border-beige-bright shadow-[0_0_6px_rgba(244,234,225,0.7)] bg-transparent z-10" />
                   <div className="absolute right-0.5 w-3.5 h-3.5 xs:w-4.5 xs:h-4.5 rounded-full border border-beige-dark shadow-[0_0_4px_rgba(188,168,142,0.5)] bg-transparent" />
@@ -179,13 +179,13 @@ export default function EntranceDoor({ onOpen }: EntranceDoorProps) {
                 transition={{ duration: 1.2, delay: 0.3 }}
                 className="flex flex-wrap items-center justify-end gap-x-1 xs:gap-x-2.5 sm:gap-x-3.5 md:gap-x-4 gap-y-0.5 mb-2 sm:mb-8 w-full"
               >
-                <span className="font-serif-decorative text-sm xs:text-xl sm:text-3xl md:text-5xl lg:text-6xl font-black tracking-[0.06em] gold-text-gradient filter drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)] select-none">
+                <span className="font-serif-decorative text-lg xs:text-xl sm:text-3xl md:text-5xl lg:text-6xl font-black tracking-[0.06em] gold-text-gradient filter drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)] select-none">
                   NINA
                 </span>
-                <span className="font-pinyon text-beige-base text-sm xs:text-2xl sm:text-3xl md:text-6xl tracking-normal select-none italic font-medium px-0.5 filter drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
+                <span className="font-pinyon text-beige-base text-xl xs:text-2xl sm:text-3xl md:text-6xl tracking-normal select-none italic font-medium px-0.5 filter drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
                   &
                 </span>
-                <span className="font-serif-decorative text-sm xs:text-xl sm:text-3xl md:text-5xl lg:text-6xl font-black tracking-[0.06em] gold-text-gradient filter drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)] select-none">
+                <span className="font-serif-decorative text-lg xs:text-xl sm:text-3xl md:text-5xl lg:text-6xl font-black tracking-[0.06em] gold-text-gradient filter drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)] select-none">
                   MERWANE
                 </span>
               </motion.div>
@@ -195,7 +195,7 @@ export default function EntranceDoor({ onOpen }: EntranceDoorProps) {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.0, delay: 0.5 }}
-                className="font-serif-royal italic text-[10px] xs:text-xs sm:text-lg md:text-xl lg:text-2xl text-beige-bright tracking-wide mb-3 xs:mb-6 sm:mb-10 max-w-md leading-relaxed text-right filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] px-1"
+                className="font-serif-royal italic text-[12px] xs:text-xs sm:text-lg md:text-xl lg:text-2xl text-beige-bright tracking-wide mb-3 xs:mb-6 sm:mb-10 max-w-md leading-relaxed text-right filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] px-1"
               >
                 « Nous serions infiniment honorés de votre présence pour célébrer notre union. »
               </motion.p>
@@ -209,7 +209,7 @@ export default function EntranceDoor({ onOpen }: EntranceDoorProps) {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={handleOpen}
-                className="relative px-3.5 py-2 xs:px-8 xs:py-3 md:px-12 md:py-4 bg-bordeaux-light hover:bg-[#9d2b38] border border-beige-base/60 hover:border-beige-bright text-beige-bright rounded-full font-serif-luxury text-[8.5px] xs:text-[10px] md:text-xs tracking-[0.15em] xs:tracking-[0.25em] uppercase cursor-pointer shadow-[0_4px_30px_rgba(139,38,50,0.45)] overflow-hidden group transition-all duration-300 font-bold"
+                className="relative px-4 py-2.5 xs:px-8 xs:py-3 md:px-12 md:py-4 bg-bordeaux-light hover:bg-[#9d2b38] border border-beige-base/60 hover:border-beige-bright text-beige-bright rounded-full font-serif-luxury text-[10px] xs:text-[10px] md:text-xs tracking-[0.15em] xs:tracking-[0.25em] uppercase cursor-pointer shadow-[0_4px_30px_rgba(139,38,50,0.45)] overflow-hidden group transition-all duration-300 font-bold"
               >
                 <div 
                   className="absolute inset-0 bg-gradient-to-r from-transparent via-beige-light/25 to-transparent -translate-x-full group-hover:animate-gold-shimmer" 
