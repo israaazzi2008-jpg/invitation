@@ -150,15 +150,15 @@ export default function EntranceDoor({ onOpen }: EntranceDoorProps) {
           </div>
 
           {/* MAIN INTERACTIVE AREA */}
-          <div className="relative flex-1 w-full flex flex-row items-center justify-end px-3 xs:px-6 sm:px-12 md:px-20 lg:px-32 z-30">
+          <div className="relative flex-1 w-full flex flex-row items-center justify-end px-4 xs:px-6 sm:px-12 md:px-20 lg:px-32 z-30">
             
-            {/* Left side spacer to hold the gorgeous portrait illustration space */}
-            <div className="w-[42%] xs:w-[45%] md:w-[45%] h-full pointer-events-none" />
+            {/* Left side spacer to hold the gorgeous portrait illustration space - hidden on mobile to give text full-width glory */}
+            <div className="hidden xs:block xs:w-[35%] sm:w-[40%] md:w-[45%] h-full pointer-events-none" />
 
             {/* Right Side: Luxurious Dark Negative Space with Gold Calligraphic Text */}
-            <div className="w-[58%] xs:w-[55%] md:w-[55%] max-w-lg md:max-w-2xl text-right flex flex-col items-end justify-center pr-2 xs:pr-4 md:pr-0 bg-transparent">
+            <div className="w-full xs:w-[65%] sm:w-[60%] md:w-[55%] max-w-lg md:max-w-2xl text-right flex flex-col items-end justify-center pr-3 xs:pr-4 md:pr-0 bg-transparent">
               
-              {/* Interlocking Rings Divider (placed elegant and high up as header) */}
+               {/* Interlocking Rings Divider (placed elegant and high up as header) */}
               <motion.div 
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -177,15 +177,15 @@ export default function EntranceDoor({ onOpen }: EntranceDoorProps) {
                 initial={{ opacity: 0, y: 25 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.2, delay: 0.3 }}
-                className="flex flex-col sm:flex-row items-end sm:items-center justify-end gap-y-1 sm:gap-y-0 gap-x-1 xs:gap-x-2.5 sm:gap-x-3.5 md:gap-x-4 mb-3 sm:mb-8 w-full"
+                className="flex flex-col sm:flex-row items-end sm:items-center justify-end gap-y-2 sm:gap-y-0 gap-x-1.5 xs:gap-x-2.5 sm:gap-x-3.5 md:gap-x-4 mb-4 sm:mb-8 w-full"
               >
-                <span className="font-serif-decorative text-3xl xs:text-4xl sm:text-3xl md:text-5xl lg:text-6xl font-black tracking-[0.06em] gold-text-gradient filter drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)] select-none">
+                <span className="font-serif-decorative text-5xl xs:text-5xl sm:text-3xl md:text-5xl lg:text-6xl font-black tracking-[0.06em] gold-text-gradient filter drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)] select-none leading-none">
                   NINA
                 </span>
-                <span className="font-pinyon text-beige-base text-2xl xs:text-3xl sm:text-3xl md:text-6xl tracking-normal select-none italic font-medium px-1 sm:px-0.5 filter drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
+                <span className="font-pinyon text-beige-base text-4xl xs:text-3xl sm:text-3xl md:text-6xl tracking-normal select-none italic font-medium px-1 sm:px-0.5 filter drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] leading-none my-1 sm:my-0">
                   &
                 </span>
-                <span className="font-serif-decorative text-3xl xs:text-4xl sm:text-3xl md:text-5xl lg:text-6xl font-black tracking-[0.06em] gold-text-gradient filter drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)] select-none">
+                <span className="font-serif-decorative text-5xl xs:text-5xl sm:text-3xl md:text-5xl lg:text-6xl font-black tracking-[0.06em] gold-text-gradient filter drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)] select-none leading-none">
                   MERWANE
                 </span>
               </motion.div>
@@ -195,7 +195,7 @@ export default function EntranceDoor({ onOpen }: EntranceDoorProps) {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.0, delay: 0.5 }}
-                className="font-serif-royal italic text-[13px] xs:text-sm sm:text-lg md:text-xl lg:text-2xl text-beige-bright tracking-wide mb-3 xs:mb-6 sm:mb-10 max-w-md leading-relaxed text-right filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] px-1"
+                className="font-serif-royal italic text-lg xs:text-base sm:text-lg md:text-xl lg:text-2xl text-beige-bright tracking-wide mb-4 xs:mb-6 sm:mb-10 max-w-md leading-relaxed text-right filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] px-1"
               >
                 « Nous serions infiniment honorés de votre présence pour célébrer notre union. »
               </motion.p>
@@ -209,7 +209,7 @@ export default function EntranceDoor({ onOpen }: EntranceDoorProps) {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={handleOpen}
-                className="relative px-5 py-3 xs:px-8 xs:py-3 md:px-12 md:py-4 bg-bordeaux-light hover:bg-[#9d2b38] border border-beige-base/60 hover:border-beige-bright text-beige-bright rounded-full font-serif-luxury text-[11px] xs:text-[10px] md:text-xs tracking-[0.15em] xs:tracking-[0.25em] uppercase cursor-pointer shadow-[0_4px_30px_rgba(139,38,50,0.45)] overflow-hidden group transition-all duration-300 font-bold"
+                className="relative px-6 py-3 xs:px-8 xs:py-3 md:px-12 md:py-4 bg-bordeaux-light hover:bg-[#9d2b38] border border-beige-base/60 hover:border-beige-bright text-beige-bright rounded-full font-serif-luxury text-xs xs:text-[10px] md:text-xs tracking-[0.15em] xs:tracking-[0.25em] uppercase cursor-pointer shadow-[0_4px_30px_rgba(139,38,50,0.45)] overflow-hidden group transition-all duration-300 font-bold"
               >
                 <div 
                   className="absolute inset-0 bg-gradient-to-r from-transparent via-beige-light/25 to-transparent -translate-x-full group-hover:animate-gold-shimmer" 
@@ -227,6 +227,5 @@ export default function EntranceDoor({ onOpen }: EntranceDoorProps) {
     </AnimatePresence>
   );
 }
-
 
 
