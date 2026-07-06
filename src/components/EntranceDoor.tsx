@@ -158,7 +158,7 @@ export default function EntranceDoor({ onOpen }: EntranceDoorProps) {
             {/* Right Side: Luxurious Dark Negative Space with Gold Calligraphic Text */}
             <div className="w-full xs:w-[65%] sm:w-[60%] md:w-[55%] max-w-lg md:max-w-2xl text-right flex flex-col items-end justify-center pr-3 xs:pr-4 md:pr-0 bg-transparent">
               
-               {/* Interlocking Rings Divider (placed elegant and high up as header) */}
+              {/* Interlocking Rings Divider (placed elegant and high up as header) */}
               <motion.div 
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -171,6 +171,16 @@ export default function EntranceDoor({ onOpen }: EntranceDoorProps) {
                   <div className="absolute right-0.5 w-3.5 h-3.5 xs:w-4.5 xs:h-4.5 rounded-full border border-beige-dark shadow-[0_0_4px_rgba(188,168,142,0.5)] bg-transparent" />
                 </div>
               </motion.div>
+
+              {/* Celebration Subtitle Label */}
+              <motion.span
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.0, delay: 0.25 }}
+                className="font-serif-luxury text-[13px] xs:text-[14px] sm:text-xs md:text-sm text-beige-bright tracking-[0.3em] uppercase block mb-3 sm:mb-4 filter drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)] font-black select-none text-right"
+              >
+                Henna & Fiançailles
+              </motion.span>
 
               {/* Majestic Couple Names in Golden Calligraphy - Styled with line breaks on mobile for a stunning, large vertical stacked design, and on a single line for desktop */}
               <motion.div
@@ -227,5 +237,6 @@ export default function EntranceDoor({ onOpen }: EntranceDoorProps) {
     </AnimatePresence>
   );
 }
+
 
 
