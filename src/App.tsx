@@ -264,7 +264,7 @@ export default function App() {
             </div>
 
             <span className="font-serif-luxury text-xs md:text-sm text-beige-bright tracking-[0.35em] uppercase block mb-4 filter drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)] font-black select-none">
-              Fiançailles de Nina & Merwane
+              Henna & Fiançailles
             </span>
             <p className="font-arabic-quran text-3xl md:text-4xl text-beige-bright filter drop-shadow-[0_2px_8px_rgba(235,220,201,0.5)] max-w-md mx-auto leading-relaxed tracking-wide select-none">
               بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
